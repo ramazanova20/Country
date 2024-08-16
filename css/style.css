@@ -7,9 +7,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+/* h1 {
     color: red;
-}
+} */
 
 .cards {
     display: flex;
@@ -67,4 +67,19 @@ h3 {
 }
 .btn:disabled{
     opacity: .5;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.topMain{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.special{
+    margin: auto;
 }
