@@ -2319,10 +2319,10 @@ let country = [
           }
         });
       }
-    function america() {
+    function americas() {
         cards.innerHTML=""
         country.map((item, i) => {
-          if (item.region == "America") {
+          if (item.region == "Americas") {
            
              cards.innerHTML += `
                 <div class="card">
@@ -2388,10 +2388,10 @@ let country = [
           }
         });
       }
-    function ocenia() {
+    function oceania() {
         cards.innerHTML=""
         country.map((item, i) => {
-          if (item.region == "Ocenia") {
+          if (item.region == "Oceania") {
            
              cards.innerHTML += `
                 <div class="card">
