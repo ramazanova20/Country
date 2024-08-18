@@ -2252,15 +2252,15 @@ let country = [
     ] 
 
     const cards = document.querySelector(".cards")
-    // const btn = document.getElementById("btn")
-    const btn = document.querySelector("#shoeMorebtn")
+    const btn = document.getElementById("shoeMorebtn")
+    // const btn = document.querySelector("#shoeMorebtn")
     
-    let deyer = 21
+    let value = 21
     // const btn = document.getElementById("btn")
     function show() {
         cards.innerHTML=""
 
-        country.slice(0, deyer).map((item, i) => {
+        country.slice(0, value).map((item, i) => {
             // item = country[i]
             cards.innerHTML += `
                 <div class="card">
@@ -2280,8 +2280,8 @@ let country = [
     show()
 
     function showMore() {
-        if (deyer < country.length) {
-            deyer += 229;
+        if (value < country.length) {
+            value += 21;
             show()
         } else {
             btn.disabled = true
@@ -2290,7 +2290,7 @@ let country = [
     }
     function filterByRegion(region) {
         const filteredCountries = country.filter(item => item.region === region);
-        deyer = 21; 
+        value = 21; 
         show(filteredCountries);
     }
 
@@ -2435,4 +2435,31 @@ let country = [
         });
       }
       
-    
+      function random() {
+        let i = rnd(0, country.length-1);
+        let obj=country[i]
+        bigCard.innerHTML = `
+                  <div class="imgflag"><img src="${obj.flag}" alt="Country flag"></div>
+                      <div class="countryinfo">
+                          <h3><a href="#">${obj.name}</a></h3>
+                          <h4><a href="#">${obj.region}</a></h4>
+                          <p>Capital: <span class="capital">${obj.capital}</span></p>
+                          <p>Area: <span class="area">${obj.area} km<sup>2</sup></span></p>
+                          <p>Population: <span class="population">${obj.population}</span></p>
+                       </div>`;
+      }
+      random();
+
+      function rnd(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+
+    const sideBar = document.querySelector(".sideBar");
+    const mobTitle = document.getElementById("mobTitle")
+        function toggleSidebar() {
+            sideBar.classList.toggle("right");
+        }
+        function toggleLight() {
+            document.body.classList.toggle("dark-mode");
+        }

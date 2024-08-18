@@ -5,33 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="regions">
+  <header>
+    <nav>
+        <ul id="deksMenu">
             <li><a href="#" onclick="europe()">Europe</a></li>
             <li><a href="#" onclick="asia()">Asia</a></li>
             <li><a href="#" onclick="americas()">Americas</a></li>
+            <div class="logoDiv">
+                <a id="logo" href="#">
+                <i class="fa-solid fa-earth-asia" style="color: #B197FC;"></i>
+                </a>
+            </div>
             <li><a href="#" onclick="africa()">Africa</a></li>
             <li><a href="#" onclick="oceania()">Oceania</a></li>
             <li class="arc"><a href="#" onclick="antarctic()">Antarctic</a></li>
+            <li><i onclick="toggleLight()" class="fa-solid fa-moon" id="darkMode"></i></li>
+        </ul>
+
+    </nav>
+
+    <div class="sideBar">
+        <div id="mobTitle">
+            <div class="logoDiv">
+                <a id="logo" href="#">
+                    <i class="fa-solid fa-earth-asia" style="color: #B197FC;"></i>                    
+                </a>
+            </div>
+            <i onclick="toggleLight()" class="fa-solid fa-moon" id="darkMode"></i>
+            <i onclick="toggleSidebar()" class="fa-solid fa-bars" id="hamIcon"></i>
         </div>
         
-    </header>
+        <div class="sidebar">
+            <ul id="menu">
+                <li><a href="#" onclick="europe()">Europe</a></li>
+                <li><a href="#" onclick="asia()">Asia</a></li>
+                <li><a href="#" onclick="americas()">Americas</a></li>
+                <li><a href="#" onclick="africa()">Africa</a></li>
+                <li><a href="#" onclick="oceania()">Oceania</a></li>
+                <li class="arc"><a href="#" onclick="antarctic()">Antarctic</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
     <main>
         <div class="container">
             <div class="topMain">
                 <h1>Welcome to CountryApp Website</h1>
                 <h2>You can find data of any country in this website.</h2>
                 <div class="btns">
-                    <button class="btn">have a look</button>
-                    <button class="btn">search</button>
+                    <button class="btn"><b>HAVE A LOOK</b></button>
+                    <button class="btn1"><b>SEARCH</b></button>
                 </div> 
             </div>
-            <div class="card special">
-                <div class="imgflag">
+            <div id="bigCard" class="card special">
+                <!-- <div class="imgflag">
                   <img src="https://flagcdn.com/gq.svg" alt="country flag" />
                 </div>
                 <div class="countryinfo">
@@ -47,20 +80,23 @@
                     <span class="area"> 108889 km<sup>2</sup> </span>
                   </p>
                   <p>Population: <span class="popul">16858333</span></p>
-                </div>
+                </div> -->
               </div>
             <div class="cards">
 
             </div>
     
             <div class="btns">
-                <button class="btn" id="shoeMorebtn" onclick="showMore()">HAVE A LOOK</button>
-                <button onclick="show()" class="btn">SEARCH</button>
+                <button class="btn1" id="shoeMorebtn" onclick="showMore()"><b>SHOW MORE</b></button>
+                
             </div>
         </div>
     </main>
     <footer>
-
+      <div class="bgColor">
+        <h1>GUNAY RAMAZANOVA</h1>
+      </div>
+      
     </footer>
 
     <script src="js/country.js">
