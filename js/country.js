@@ -2456,7 +2456,6 @@ let country = [
 
 
     const sideBar = document.querySelector(".sideBar");
-    const mobTitle = document.getElementById("mobTitle")
         function toggleSidebar() {
             sideBar.classList.toggle("right");
         }
