@@ -2455,10 +2455,11 @@ let country = [
       }
 
 
-    const sideBar = document.querySelector(".sideBar");
-        function toggleSidebar() {
-            sideBar.classList.toggle("right");
-        }
-        function toggleLight() {
-            document.body.classList.toggle("dark-mode");
-        }
+    //   const sideBar = document.querySelector(".sideBar");
+    //   const mobTitle = document.getElementById("mobTitle")
+    //   function toggleSidebar() {
+    //       sideBar.classList.toggle("right");
+    //   }
+    //   function toggleLight() {
+    //       document.body.classList.toggle("dark-mode");
+    //   }

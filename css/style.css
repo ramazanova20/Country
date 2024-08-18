@@ -54,7 +54,7 @@ ul {
     li {
         padding: 10px 0 0 ;
         line-height: 3em;
-        margin: 0 40px;
+        margin: 0 30px;
         border-bottom: 1px solid #e5e7eb;
     }
 
@@ -109,8 +109,8 @@ ul {
     color: white;
   }
  
-  .dark-mode main {
-    background-color: black;
+.dark-mode main {
+    background-color:#503897;
     color: white;
 }
 
@@ -235,7 +235,6 @@ h3 {
 .topMain h2{
     color: #6F4CD6;
     text-align: center;
-    
 }
 .special{
     margin: auto;
@@ -261,7 +260,7 @@ footer h1{
     nav #deksMenu {
         display: flex;
         justify-content: center;
-        
+        width: 100%;
     }
     .sideBar{
         display: none
