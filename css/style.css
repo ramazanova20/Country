@@ -230,9 +230,11 @@ h3 {
 }
 .topMain h1{
     margin: 120px 0 50px;
+    text-align: center;
 }
 .topMain h2{
     color: #6F4CD6;
+    text-align: center;
     
 }
 .special{
