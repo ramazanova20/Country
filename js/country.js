@@ -2467,13 +2467,20 @@ function toggleLight() {
     document.body.classList.toggle("dark-mode");
 }
 
-//   const sideBar = document.querySelector(".sideBar");
-//   const mobTitle = document.getElementById("mobTitle")
-//   function toggleSidebar() {
-//       sideBar.classList.toggle("right");
-//   }
-//   function toggleLight() {
-//       document.body.classList.toggle("dark-mode");
-//   }
-//   toggleSidebar()
-//   document.getElementById("hamIcon").addEventListener("click", toggleSidebar);
+const fCountry = document.getElementById("fCountry")
+const inputField = fCountry.querySelector(".inSearch");
+
+function hLook() {
+    if (inputField.style.display === "none" || inputField.style.display === "") {
+        inputField.style.display = "block";  
+    } else {
+        inputField.style.display = "none";  
+    }
+}
+
+function scrollByRandomCard() {
+    window.scrollTo({
+        top: 500 ,
+        behavior: 'smooth',
+    });
+}

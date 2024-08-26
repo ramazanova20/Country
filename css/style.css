@@ -26,7 +26,9 @@ header {
     overflow-x: hidden;
     width: 100%;
     position: relative;
+    z-index: 1000;
 }
+
 
 .sideBar {
     width: 100%;
@@ -35,15 +37,15 @@ header {
     height: 100vh;
     right: 0;
     top: 0;
-    margin: 80px 0;
+    margin-top: 80px; 
+    z-index: 999;
+    transition: transform 0.3s ease-in-out;
 }
 
 
 nav {
     transition: 1s all;
-    /* position: absolute; */
     width: 100%;
-    /* right: -50%; */
     background-color: white;
 }
 
@@ -71,6 +73,7 @@ ul {
 .right {
     right: -100% !important;
 }
+
 
 #hamIcon {
     position: absolute;
@@ -150,11 +153,6 @@ ul {
     color: white;
 }
 
-
-/* h1 {
-    color: red;
-} */
-
 .cards {
     display: flex;
     flex-wrap: wrap;
@@ -215,7 +213,7 @@ h3 {
     background: #6F4CD6;
     color: white;
     cursor: pointer;
-
+    text-align: center;
     &:nth-last-of-type(1) {
         background: #000;
     }
@@ -236,6 +234,7 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .topMain h1 {
@@ -256,7 +255,29 @@ main {
 
     background-color: #E5E7EB;
 }
-
+.inSearch{
+    min-width: 250px;  
+    height: 50px;
+    color: black; 
+    border-radius: 0.375rem; 
+    padding: 0.5rem;  
+    border: 1px solid;  
+    position: absolute; 
+    top: 30; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 20px;
+}
+.inSearch:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(104, 74, 255, 0.75); 
+  }
+.dark .inSearch:focus {
+    box-shadow: 0 0 0 3px #7C3AED;
+  }
+.dark .inSearch {
+    border-color: #D1D5DB;
+  }
 footer {
     height: 50px;
 }
@@ -285,5 +306,8 @@ footer h1 {
 
     .card {
         width: 23%;
+    }
+    .inSearch{
+        top: 0; 
     }
 }

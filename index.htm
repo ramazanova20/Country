@@ -55,14 +55,18 @@
 </header>
     <main>
         <div class="container">
-            <div class="topMain">
-                <h1>Welcome to CountryApp Website</h1>
-                <h2>You can find data of any country in this website.</h2>
-                <div class="btns">
-                    <button class="btn"><b>HAVE A LOOK</b></button>
-                    <button class="btn1"><b>SEARCH</b></button>
-                </div> 
-            </div>
+          <div class="topMain">
+            <h1>Welcome to CountryApp Website</h1>
+            <h2>You can find data of any country on this website.</h2>
+            <div class="btns">
+                <button class="btn" onclick="scrollByRandomCard()"><b>HAVE A LOOK</b></button>
+                <div class="btn1" id="fCountry" onclick="hLook()">
+                    <b>SEARCH</b>
+                    <input type="text" placeholder="Search..." class="inSearch dark"/>
+                </div>
+            </div> 
+        </div>
+        
             <div id="bigCard" class="card special">
                 <!-- <div class="imgflag">
                   <img src="https://flagcdn.com/gq.svg" alt="country flag" />
