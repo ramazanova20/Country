@@ -2296,11 +2296,40 @@ function filterByRegion(region) {
 
 show();
 
-function africa() {
-    cards.innerHTML = ""
-    country.map((item, i) => {
-        if (item.region == "Africa") {
+// function europe() {
+//     cards.innerHTML = ""
+//     country.map((item, i) => {
+//         if (item.region == "Europe") {
 
+//             cards.innerHTML += `
+//                 <div class="card">
+//                     <div class="img flag">
+//                     <img src="${item.flag}" alt="">
+//                     </div>
+//                     <div class="about">
+//                         <h5>${item.region}</h5>
+//                         <h4>${item.name}</h4>
+//                     <div class="statics">
+//                     <div>Population: <span>${item.population}</span></div>
+//                     <div>${item.area} km<sup>2</sup></div></span></div>
+//                     </div>
+//                 </div>
+//             `;
+//             country.innerHTML = "";
+//         }
+//     });
+// }
+
+
+function getFullCards(regionArg) {
+    let arr = []
+    if (regionArg == "") arr = country.slice(0, value)
+    else arr = country
+
+    cards.innerHTML = ''
+
+    arr.map(item => {
+        if (item.region.includes(regionArg)) {
             cards.innerHTML += `
                 <div class="card">
                     <div class="img flag">
@@ -2315,126 +2344,11 @@ function africa() {
                     </div>
                 </div>
             `;
-            country.innerHTML = "";
         }
-    });
-}
-function americas() {
-    cards.innerHTML = ""
-    country.map((item, i) => {
-        if (item.region == "Americas") {
-
-            cards.innerHTML += `
-                <div class="card">
-                    <div class="img flag">
-                    <img src="${item.flag}" alt="">
-                    </div>
-                    <div class="about">
-                        <h5>${item.region}</h5>
-                        <h4>${item.name}</h4>
-                    <div class="statics">
-                    <div>Population: <span>${item.population}</span></div>
-                    <div>${item.area} km<sup>2</sup></div></span></div>
-                    </div>
-                </div>
-            `;
-            country.innerHTML = "";
-        }
-    });
-}
-function europe() {
-    cards.innerHTML = ""
-    country.map((item, i) => {
-        if (item.region == "Europe") {
-
-            cards.innerHTML += `
-                <div class="card">
-                    <div class="img flag">
-                    <img src="${item.flag}" alt="">
-                    </div>
-                    <div class="about">
-                        <h5>${item.region}</h5>
-                        <h4>${item.name}</h4>
-                    <div class="statics">
-                    <div>Population: <span>${item.population}</span></div>
-                    <div>${item.area} km<sup>2</sup></div></span></div>
-                    </div>
-                </div>
-            `;
-            country.innerHTML = "";
-        }
-    });
-}
-function asia() {
-    cards.innerHTML = ""
-    country.map((item, i) => {
-        if (item.region == "Asia") {
-
-            cards.innerHTML += `
-                <div class="card">
-                    <div class="img flag">
-                    <img src="${item.flag}" alt="">
-                    </div>
-                    <div class="about">
-                        <h5>${item.region}</h5>
-                        <h4>${item.name}</h4>
-                    <div class="statics">
-                    <div>Population: <span>${item.population}</span></div>
-                    <div>${item.area} km<sup>2</sup></div></span></div>
-                    </div>
-                </div>
-            `;
-            country.innerHTML = "";
-        }
-    });
-}
-function oceania() {
-    cards.innerHTML = ""
-    country.map((item, i) => {
-        if (item.region == "Oceania") {
-
-            cards.innerHTML += `
-                <div class="card">
-                    <div class="img flag">
-                    <img src="${item.flag}" alt="">
-                    </div>
-                    <div class="about">
-                        <h5>${item.region}</h5>
-                        <h4>${item.name}</h4>
-                    <div class="statics">
-                    <div>Population: <span>${item.population}</span></div>
-                    <div>${item.area} km<sup>2</sup></div></span></div>
-                    </div>
-                </div>
-            `;
-            country.innerHTML = "";
-        }
-    });
-}
-function antarctic() {
-    cards.innerHTML = ""
-    country.map((item, i) => {
-        if (item.region == "Antarctic") {
-
-            cards.innerHTML += `
-                <div class="card">
-                    <div class="img flag">
-                    <img src="${item.flag}" alt="">
-                    </div>
-                    <div class="about">
-                        <h5>${item.region}</h5>
-                        <h4>${item.name}</h4>
-                    <div class="statics">
-                    <div>Population: <span>${item.population}</span></div>
-                    <div>${item.area} km<sup>2</sup></div></span></div>
-                    </div>
-                </div>
-            `;
-            country.innerHTML = "";
-        }
-    });
+    })
 }
 
+getFullCards("");
 function random() {
     let i = rnd(0, country.length - 1);
     let obj = country[i]
